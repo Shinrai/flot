@@ -12,6 +12,7 @@
 	function drawLegend(plot, ctx) {
 		var options = plot.getOptions();
 		if(!options.legend.show) return;
+		if(!options.legend.canvas) return;
 
 		var placeholder = plot.getPlaceholder();
 		var container = options.legend.container || placeholder.find('.legend');
